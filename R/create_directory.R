@@ -1,6 +1,6 @@
 #' Create Temporary Directory
 #'
-#' @param filePath
+#' @param filePath A valid directory path where barcodes are saved
 #' @export
 
 create_directory <- function(filePath)
