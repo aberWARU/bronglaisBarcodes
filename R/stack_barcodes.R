@@ -15,10 +15,11 @@ stack_barcodes <- function(ID = ID, DOB = DOB, GENDER = GENDER, ADDRESS = ADDRES
     image_read(paste0(getOption('savePath'), '/ADDRESS.png')) %>% image_resize(., '51%x100%')
 
 
+  white_space <-
+    image_read(system.file(package = 'bronglaisBarcodes', 'white_space.png'))
 
-  white_space <- image_read('inst/white_space.png')
   white_space2 <-
-    image_read('inst/white_space.png') %>% image_scale(., 'x5')
+    image_read(system.file(package = 'bronglaisBarcodes', 'white_space.png')) %>% image_scale(., 'x5')
 
 
   id_stack <-
