@@ -1,4 +1,10 @@
-
+#' Stack Barcodes
+#'
+#' @export
+#'
+#'
+#'
+#'
 
 
 stack_barcodes <- function(ID = ID, DOB = DOB, GENDER = GENDER, ADDRESS = ADDRESS, TYPE)
