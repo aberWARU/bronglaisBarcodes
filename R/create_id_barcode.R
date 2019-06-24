@@ -1,6 +1,10 @@
 #' Create ID Barcode
 #'
-#' @param id
+#' This functions invokes a system command to `Zint` and outputs a **Code 128** barcode.
+#'
+#' Barcodes are saved to the directory which has been created using `create_directory`.
+#'
+#' @param id A character string of participant ID
 #' @export
 
 create_id_barcode <- function(id)
