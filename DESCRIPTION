@@ -1,0 +1,14 @@
+Package: bronglaisBarcodes
+Type: Package
+Title: Barcode Generator for Blood Biochemistry
+Version: 0.1.0
+Authors@R: c(
+    person("Tom", "Wilson", , "tpw2@aber.ac.uk", c("aut", "cre")))
+Description: Create barcodes for transferring samples to the Bronglais Clinical Biochemistry Unit from studies at the 
+Well-being & Health Assessment Research Unit (WARU).
+License: GPL (>= 3)
+Depends:
+    magrittr,
+    magick
+Encoding: UTF-8
+LazyData: true
