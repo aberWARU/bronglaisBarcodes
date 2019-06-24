@@ -12,7 +12,7 @@ stack_barcodes <- function(ID = ID, DOB = DOB, GENDER = GENDER, ADDRESS = ADDRES
     image_read(paste0(getOption('savePath'), '/DOB.png')) %>% image_resize(., '93%x100%')
 
   address_barcode <-
-    image_read(paste0(getOption('savePath'), '/ADDRESS.png')) %>% image_resize(., '51%x75%')
+    image_read(paste0(getOption('savePath'), '/ADDRESS.png')) %>% image_resize(., '51%x100%')
 
 
 
@@ -27,7 +27,7 @@ stack_barcodes <- function(ID = ID, DOB = DOB, GENDER = GENDER, ADDRESS = ADDRES
                                                                                     location = '+80+30') %>%
     image_annotate(.,
                    GENDER, font = 'Arial', size = 14,
-                   location = '+200+30')
+                   location = '+210+30')
 
 
   dob_stack <-
@@ -43,7 +43,7 @@ stack_barcodes <- function(ID = ID, DOB = DOB, GENDER = GENDER, ADDRESS = ADDRES
       ADDRESS,
       font = 'Arial',
       size = 14,
-      location = '+50+26'
+      location = '+50+32'
     )
 
 
