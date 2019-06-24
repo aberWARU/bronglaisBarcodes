@@ -1,6 +1,10 @@
 #' Create Date-of-Birth (DOB) Barcode
 #'
-#' @param DOB
+#' This functions invokes a system command to `Zint` and outputs a **Code 128** barcode.
+#'
+#' Barcodes are saved to the directory which has been created using `create_directory`.
+#'
+#' @param DOB A character string of Date-of Birth in the following format; **DD/MM/YYYY**
 #' @export
 
 
