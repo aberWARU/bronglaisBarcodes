@@ -6,6 +6,12 @@
 \usage{
 create_dob_barcode(DOB)
 }
+\arguments{
+\item{DOB}{A character string of Date-of Birth in the following format; **DD/MM/YYYY**}
+}
 \description{
-Create Date-of-Birth (DOB) Barcode
+This functions invokes a system command to `Zint` and outputs a **Code 128** barcode.
+}
+\details{
+Barcodes are saved to the directory which has been created using `create_directory`.
 }

@@ -6,6 +6,9 @@
 \usage{
 create_directory(filePath)
 }
+\arguments{
+\item{filePath}{A valid directory path where barcodes are saved}
+}
 \description{
 Create Temporary Directory
 }

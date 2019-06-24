@@ -6,6 +6,12 @@
 \usage{
 create_id_barcode(id)
 }
+\arguments{
+\item{id}{A character string of participant ID}
+}
 \description{
-Create ID Barcode
+This functions invokes a system command to `Zint` and outputs a **Code 128** barcode.
+}
+\details{
+Barcodes are saved to the directory which has been created using `create_directory`.
 }

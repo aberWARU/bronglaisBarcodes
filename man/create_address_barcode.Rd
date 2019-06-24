@@ -6,6 +6,12 @@
 \usage{
 create_address_barcode(address = "CarwynJamesBuilding")
 }
+\arguments{
+\item{address}{A character string with no white space which is used as the sample address}
+}
 \description{
-Create Address Barcode
+This functions invokes a system command to `Zint` and outputs a **Code 128** barcode.
+}
+\details{
+Barcodes are saved to the directory which has been created using `create_directory`.
 }
