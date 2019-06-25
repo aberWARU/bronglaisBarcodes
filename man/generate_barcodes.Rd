@@ -12,7 +12,7 @@ generate_barcodes(filePath, ID, DOB, GENDER, ADDRESS, TYPE = c("FORM",
 
 \item{ID}{A character string of participant ID}
 
-\item{DOB}{A character string of Date-of Birth in the following format; **DD/MM/YYYY**}
+\item{DOB}{A character string of Date-of Birth in the following format; \strong{DD/MM/YYYY}}
 
 \item{GENDER}{A character of either M or F (for Male and Female respectively)}
 
@@ -25,6 +25,6 @@ generate_barcodes(filePath, ID, DOB, GENDER, ADDRESS, TYPE = c("FORM",
 - CHEM21}
 }
 \description{
-This is the main worker function of the whole package. `generate_barcodes` wraps up the barcode creation and arrangement and
+This is the main worker function of the whole package. \code{generate_barcodes} wraps up the barcode creation and arrangement and
 saves them in the specified directory.
 }

@@ -10,8 +10,8 @@ create_id_barcode(id)
 \item{id}{A character string of participant ID}
 }
 \description{
-This functions invokes a system command to `Zint` and outputs a **Code 128** barcode.
+This functions invokes a system command to \code{Zint} and outputs a \strong{Code 128} barcode.
 }
 \details{
-Barcodes are saved to the directory which has been created using `create_directory`.
+Barcodes are saved to the directory which has been created using \code{create_directory}.
 }
