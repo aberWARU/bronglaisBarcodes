@@ -16,11 +16,7 @@ stack_barcodes(ID = ID, DOB = DOB, GENDER = GENDER,
 
 \item{ADDRESS}{A character string with no white space which is used as the sample address}
 
-\item{TYPE}{A character vector of any of the following options;
-- FORM
-- LOG
-- FBC
-- CHEM21}
+\item{TYPE}{A character vector of any of the following options; FORM, LOG, FBC, CHEM21}
 }
 \description{
 This use \code{magick} to arrange the barcodes into a single image and add the necessary text annotations.

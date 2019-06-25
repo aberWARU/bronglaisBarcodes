@@ -18,11 +18,13 @@ generate_barcodes(filePath, ID, DOB, GENDER, ADDRESS, TYPE = c("FORM",
 
 \item{ADDRESS}{A character string with no white space which is used as the sample address}
 
-\item{TYPE}{A character vector of any of the following options;
-- FORM
-- LOG
-- FBC
-- CHEM21}
+\item{TYPE}{A character vector of any of the following options
+\itemize{
+\item FORM
+\item LOG
+\item FBC
+\item CHEM21
+}}
 }
 \description{
 This is the main worker function of the whole package. \code{generate_barcodes} wraps up the barcode creation and arrangement and
