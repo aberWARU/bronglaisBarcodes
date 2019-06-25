@@ -1,0 +1,4 @@
+#' @importFrom utils globalVariables
+
+globalVariables('.')
+
