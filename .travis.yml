@@ -1,8 +1,17 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+language: r
 
-language: R
-sudo: false
+sudo: required
 cache: packages
-apt:
-  packages:
-    - libmagick++-dev
+warnings_are_errors: true
+
+apt_packages:
+  - libmagick++-dev
+
+r:
+  - release
+  - devel
+  
+notifications:
+    email:
+    on_success: change
+    on_failure: change
