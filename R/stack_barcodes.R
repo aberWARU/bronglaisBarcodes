@@ -113,6 +113,30 @@ stack_barcodes <-
         )
     }
 
+    if (TYPE == 'VITD') {
+      type_stack <-
+        c(white_space, white_space) %>% magick::image_append(., stack = TRUE) %>% magick::image_annotate(
+          .,
+          'Purple top: Vitamin D',
+          font = 'Arial',
+          size = 12,
+          location = '+160+15'
+        )
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     final_barcode <-
       c(white_space2, id_stack, address_stack, dob_stack, type_stack) %>% magick::image_append(., stack = TRUE)
