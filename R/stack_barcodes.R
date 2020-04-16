@@ -124,6 +124,16 @@ stack_barcodes <-
         )
     }
 
+    if (TYPE == 'GLUCOSE') {
+      type_stack <-
+        c(white_space, white_space) %>% magick::image_append(., stack = TRUE) %>% magick::image_annotate(
+          .,
+          'Grey top: Glucose',
+          font = 'Arial',
+          size = 12,
+          location = '+165+15'
+        )
+    }
 
 
 
