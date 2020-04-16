@@ -1,4 +1,6 @@
 #' @importFrom utils globalVariables
 
-globalVariables('.')
+globalVariables(c('.',
+                  'property',
+                  'value'))
 
