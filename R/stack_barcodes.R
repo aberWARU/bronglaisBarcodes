@@ -66,11 +66,13 @@ stack_barcodes <-
                                                                                                        location = text_location(DOB))
 
     address_stack <-
-      c(address_barcode, white_space, white_space2) %>% magick::image_append(., stack = TRUE) %>% magick::image_annotate(.,
-                                                                                                                         ADDRESS,
-                                                                                                                         font = 'Arial',
-                                                                                                                         size = 14,
-                                                                                                                         location = text_location(ADDRESS))
+      c(address_barcode, white_space, white_space2) %>% magick::image_append(., stack = TRUE) %>% magick::image_annotate(
+        .,
+        ADDRESS,
+        font = 'Arial',
+        size = 14,
+        location = text_location(ADDRESS)
+      )
 
 
     if (TYPE == 'FORM') {
@@ -136,16 +138,27 @@ stack_barcodes <-
     }
 
 
+    if (TYPE == 'HBA1C') {
+      type_stack <-
+        c(white_space, white_space) %>% magick::image_append(., stack = TRUE) %>% magick::image_annotate(
+          .,
+          'Purple top: HbA1c',
+          font = 'Arial',
+          size = 12,
+          location = '+170+15'
+        )
+    }
 
-
-
-
-
-
-
-
-
-
+    if (TYPE == 'INSULIN') {
+      type_stack <-
+        c(white_space, white_space) %>% magick::image_append(., stack = TRUE) %>% magick::image_annotate(
+          .,
+          'Yellow top: Insulin',
+          font = 'Arial',
+          size = 12,
+          location = '+170+15'
+        )
+    }
 
 
     final_barcode <-
