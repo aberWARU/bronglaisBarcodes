@@ -51,6 +51,28 @@ generate_barcodes <-
     }
 
 
+    TYPE_DICT <-
+      c('FORM',
+        'LOG',
+        'FBC',
+        'CHEM21',
+        'VITD',
+        'GLUCOSE',
+        'INSULIN',
+        'HBA1C')
+
+    TYPE_CHECK <- list()
+    for (i in seq_along(TYPE)) {
+      TYPE_CHECK[[i]] <- TYPE[[i]] %in% TYPE_DICT
+    }
+
+    TYPE_CHECK <- unlist(TYPE_CHECK)
+
+    if (any(TYPE_CHECK == FALSE)) {
+      stop('Incorrect TYPE, check input and try again', call. = FALSE)
+    }
+
+
     create_directory(filePath = filePath)
 
     create_id_barcode(id = ID)
