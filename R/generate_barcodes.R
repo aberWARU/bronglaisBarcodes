@@ -9,6 +9,16 @@
 #' @param GENDER A character of either M or F (for Male and Female respectively)
 #' @param ADDRESS A character string with no white space which is used as the sample address
 #' @param TYPE A character vector of any of the following options
+#'     * **FORM** : Transfer Form
+#'     * **LOG** : Log Book
+#'     * **FBC** : Full Blood Count
+#'     * **CHEM21** : Chemistry-21 Panel (LFT, U&E)
+#'     * **VITD** : Vitamin-D
+#'     * **GLUCOSE** : Glucose
+#'     * **HBA1C** : Glycated Haemoglobin (HbA1c)
+#'     * **INSULIN** : Insulin
+#' @param pathRename logical; if `TRUE` then the directory where barcodes are saved to will be named `ID` + `Sys.Date()`. IF `FALSE` (default)
+#' then the original UID code will be used for directory namming.
 #'
 #' @export
 
@@ -19,7 +29,7 @@ generate_barcodes <-
            GENDER,
            ADDRESS,
            TYPE = c('FORM', 'LOG', 'FBC'),
-           pathRename = TRUE)
+           pathRename = FALSE)
   {
     zint_status <- check_zint()
     if (zint_status == 0) {
