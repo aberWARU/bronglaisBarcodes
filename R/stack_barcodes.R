@@ -50,7 +50,7 @@ stack_barcodes <-
                                                                                                       ID,
                                                                                                       font = 'Arial',
                                                                                                       size = 14,
-                                                                                                      location = '+80+35') %>%
+                                                                                                      location = text_location(ID)) %>%
       magick::image_annotate(.,
                              GENDER,
                              font = 'Arial',
@@ -63,14 +63,14 @@ stack_barcodes <-
                                                                                                        DOB,
                                                                                                        font = 'Arial',
                                                                                                        size = 14,
-                                                                                                       location = '+80+35')
+                                                                                                       location = text_location(DOB))
 
     address_stack <-
       c(address_barcode, white_space, white_space2) %>% magick::image_append(., stack = TRUE) %>% magick::image_annotate(.,
                                                                                                                          ADDRESS,
                                                                                                                          font = 'Arial',
                                                                                                                          size = 14,
-                                                                                                                         location = '+50+32')
+                                                                                                                         location = text_location(ADDRESS))
 
 
     if (TYPE == 'FORM') {
