@@ -6,7 +6,7 @@
 #' @param DOB A character string of Date-of Birth in the following format; **DD/MM/YYYY**
 #' @param GENDER A character of either M or F (for Male and Female respectively)
 #' @param ADDRESS A character string with no white space which is used as the sample address
-#' @param TYPE A character vector of any of the following options; FORM, LOG, FBC, CHEM21
+#' @param TYPE A character vector of any of the following options; FORM, LOG, FBC, CHEM21, VITD, GLUCOSE, HBA1C, INSULIN
 #'
 #' @keywords internal
 #' @importFrom magrittr %>%
