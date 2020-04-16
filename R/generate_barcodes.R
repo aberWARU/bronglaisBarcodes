@@ -18,8 +18,14 @@ generate_barcodes <-
            DOB,
            GENDER,
            ADDRESS,
-           TYPE = c('FORM', 'LOG', 'FBC'))
+           TYPE = c('FORM', 'LOG', 'FBC'),
+           pathRename = TRUE)
   {
+    zint_status <- check_zint()
+    if (zint_status == 0) {
+      return(invisible(NULL))
+    }
+
     create_directory(filePath = filePath)
 
     create_id_barcode(id = ID)
@@ -44,6 +50,14 @@ generate_barcodes <-
     file.remove(stringr::str_c(getOption('savePath'), '/ID.png'))
     file.remove(stringr::str_c(getOption('savePath'), '/DOB.png'))
     file.remove(stringr::str_c(getOption('savePath'), '/ADDRESS.png'))
+
+    if (isTRUE(pathRename)) {
+      file.rename(
+        from = getOption('savePath'),
+        to = stringr::str_c(filePath, '/', ID, '_', Sys.Date())
+      )
+      options(savePath =  stringr::str_c(filePath, '/', ID, '_', Sys.Date()))
+    }
 
     message(crayon::green(cli::symbol$tick, 'Barcodes saved to', getOption('savePath')))
 
