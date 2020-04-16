@@ -41,8 +41,15 @@ generate_barcodes <-
           TYPE = TYPE[i]
         )
 
-      image_write(barcode_out, path = paste0(getOption('savePath'), '/', TYPE[i], '.png'))
+      magick::image_write(barcode_out, path = paste0(getOption('savePath'), '/', TYPE[i], '.png'))
 
     }
+
+    file.remove(stringr::str_c(getOption('savePath'), '/ID.png'))
+    file.remove(stringr::str_c(getOption('savePath'), '/DOB.png'))
+    file.remove(stringr::str_c(getOption('savePath'), '/ADDRESS.png'))
+
+    message(crayon::green(cli::symbol$tick, 'Barcodes saved to', getOption('savePath')))
+
     return(invisible(NULL))
   }
