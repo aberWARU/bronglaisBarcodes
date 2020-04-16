@@ -26,14 +26,16 @@ generate_barcodes(
 \item{ADDRESS}{A character string with no white space which is used as the sample address}
 
 \item{TYPE}{A character vector of any of the following options
-* \strong{FORM} : Transfer Form
-* \strong{LOG} : Log Book
-* \strong{FBC} : Full Blood Count
-* \strong{CHEM21} : Chemistry-21 Panel (LFT, U&E)
-* \strong{VITD} : Vitamin-D
-* \strong{GLUCOSE} : Glucose
-* \strong{HBA1C} : Glycated Haemoglobin (HbA1c)
-* \strong{INSULIN} : Insulin}
+\itemize{
+\item \strong{FORM} : Transfer Form
+\item \strong{LOG} : Log Book
+\item \strong{FBC} : Full Blood Count
+\item \strong{CHEM21} : Chemistry-21 Panel (LFT, U&E)
+\item \strong{VITD} : Vitamin-D
+\item \strong{GLUCOSE} : Glucose
+\item \strong{HBA1C} : Glycated Haemoglobin (HbA1c)
+\item \strong{INSULIN} : Insulin
+}}
 
 \item{pathRename}{logical; if \code{TRUE} then the directory where barcodes are saved to will be named \code{ID} + \code{Sys.Date()}. IF \code{FALSE} (default)
 then the original UID code will be used for directory namming.}
