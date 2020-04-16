@@ -36,6 +36,21 @@ generate_barcodes <-
       return(invisible(NULL))
     }
 
+
+    if (GENDER != 'M' |
+        GENDER != 'F') {
+      stop('GENDER must be M or F', call. = FALSE)
+    }
+
+    if (!is.character(ID)) {
+      stop('ID must be a character string', call. = FALSE)
+    }
+
+    if (length(TYPE) > 8) {
+      stop('TYPE exceeds the number of available options', call. = FALSE)
+    }
+
+
     create_directory(filePath = filePath)
 
     create_id_barcode(id = ID)
