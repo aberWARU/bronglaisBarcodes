@@ -10,7 +10,8 @@ generate_barcodes(
   DOB,
   GENDER,
   ADDRESS,
-  TYPE = c("FORM", "LOG", "FBC")
+  TYPE = c("FORM", "LOG", "FBC"),
+  pathRename = TRUE
 )
 }
 \arguments{
