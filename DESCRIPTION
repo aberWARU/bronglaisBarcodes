@@ -1,18 +1,22 @@
 Package: bronglaisBarcodes
 Type: Package
 Title: Barcode Generator for Blood Biochemistry
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Tom", "Wilson", , "tpw2@aber.ac.uk", c("aut", "cre")))
 Description: Create barcodes for transferring samples to the Bronglais Clinical Biochemistry Unit from studies at the  Well-being & Health Assessment Research Unit (WARU).
 License: GPL (>= 3)
 Depends:
     magrittr,
-    magick
 Imports:
-    uuid
+    magick,
+    uuid,
+    dplyr,
+    stringr,
+    crayon,
+    cli
 SystemRequirements:
-    zint
+    zint (v 2.4.3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
