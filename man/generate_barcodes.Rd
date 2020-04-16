@@ -4,8 +4,14 @@
 \alias{generate_barcodes}
 \title{Generate Barcodes}
 \usage{
-generate_barcodes(filePath, ID, DOB, GENDER, ADDRESS, TYPE = c("FORM",
-  "LOG", "FBC"))
+generate_barcodes(
+  filePath,
+  ID,
+  DOB,
+  GENDER,
+  ADDRESS,
+  TYPE = c("FORM", "LOG", "FBC")
+)
 }
 \arguments{
 \item{filePath}{A valid directory path where barcodes are saved}

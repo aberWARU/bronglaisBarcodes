@@ -4,8 +4,7 @@
 \alias{stack_barcodes}
 \title{Stack Barcodes}
 \usage{
-stack_barcodes(ID = ID, DOB = DOB, GENDER = GENDER,
-  ADDRESS = ADDRESS, TYPE)
+stack_barcodes(ID = ID, DOB = DOB, GENDER = GENDER, ADDRESS = ADDRESS, TYPE)
 }
 \arguments{
 \item{ID}{A character string of participant ID}
