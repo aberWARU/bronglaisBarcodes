@@ -1,6 +1,5 @@
 test_that("generate_barcodes", {
-
- expect_error(
+  expect_error(
     generate_barcodes(
       getwd(),
       ID = 'TEST',
@@ -9,7 +8,9 @@ test_that("generate_barcodes", {
       ADDRESS = 'Uni',
       TYPE = 'FORM',
       pathRename = FALSE
-    ))
+    ),
+    'GENDER must be M or F'
+  )
 
   expect_error(
     generate_barcodes(
@@ -20,7 +21,9 @@ test_that("generate_barcodes", {
       ADDRESS = 'Uni',
       TYPE = 'FORM',
       pathRename = FALSE
-    ))
+    ),
+    'GENDER must be M or F'
+  )
 
 
   expect_error(
@@ -32,19 +35,10 @@ test_that("generate_barcodes", {
       ADDRESS = 'Uni',
       TYPE = 'FORM',
       pathRename = FALSE
-    ))
+    ),
+    'ID must be a character string'
+  )
 
-
-  expect_error(
-    generate_barcodes(
-      getwd(),
-      ID = 'TEST',
-      DOB = '01/01/2000',
-      GENDER = 'Male',
-      ADDRESS = 'Uni',
-      TYPE = 'FORM',
-      pathRename = FALSE
-    ))
 
   expect_error(
     generate_barcodes(
@@ -55,7 +49,9 @@ test_that("generate_barcodes", {
       ADDRESS = 'Uni',
       TYPE = 'Fbc',
       pathRename = FALSE
-    ))
+    ),
+    'Incorrect TYPE, check input and try again'
+  )
 
   expect_error(
     generate_barcodes(
@@ -64,8 +60,20 @@ test_that("generate_barcodes", {
       DOB = '01/01/2000',
       GENDER = 'M',
       ADDRESS = 'Uni',
-      TYPE = c('FORM', 'LOG', 'VITD', 'CHEM21', 'LOG', 'HBA1C', 'FORM', 'GLUCOSE'),
+      TYPE = c(
+        'FORM',
+        'LOG',
+        'VITD',
+        'CHEM21',
+        'LOG',
+        'HBA1C',
+        'FORM',
+        'GLUCOSE',
+        'LOG'
+      ),
       pathRename = FALSE
-    ))
+    ),
+    'TYPE exceeds the number of available options'
+  )
 
 })

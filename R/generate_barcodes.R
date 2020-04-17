@@ -37,8 +37,7 @@ generate_barcodes <-
     }
 
 
-    if (GENDER != 'M' |
-        GENDER != 'F') {
+    if (GENDER != 'M' & GENDER != 'F') {
       stop('GENDER must be M or F', call. = FALSE)
     }
 
