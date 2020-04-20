@@ -1,7 +1,7 @@
 test_that("generate_barcodes", {
   expect_error(
     generate_barcodes(
-      getwd(),
+      '~/',
       ID = 'TEST',
       DOB = '01/01/2000',
       GENDER = 'NA',
@@ -14,7 +14,7 @@ test_that("generate_barcodes", {
 
   expect_error(
     generate_barcodes(
-      getwd(),
+      '~/',
       ID = 'TEST',
       DOB = '01/01/2000',
       GENDER = 'Male',
@@ -28,7 +28,7 @@ test_that("generate_barcodes", {
 
   expect_error(
     generate_barcodes(
-      getwd(),
+      '~/',
       ID = 0123,
       DOB = '01/01/2000',
       GENDER = 'M',
@@ -42,7 +42,7 @@ test_that("generate_barcodes", {
 
   expect_error(
     generate_barcodes(
-      getwd(),
+      '~/',
       ID = 'TEST',
       DOB = '01/01/2000',
       GENDER = 'M',
@@ -55,7 +55,7 @@ test_that("generate_barcodes", {
 
   expect_error(
     generate_barcodes(
-      getwd(),
+      '~/',
       ID = 'TEST',
       DOB = '01/01/2000',
       GENDER = 'M',
