@@ -1,5 +1,6 @@
 test_that("generate_barcodes", {
-  expect_error(
+
+    expect_error(
     generate_barcodes(
       '~/',
       ID = 'TEST',
