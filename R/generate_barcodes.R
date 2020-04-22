@@ -32,10 +32,6 @@ generate_barcodes <-
            pathRename = FALSE)
   {
     zint_status <- check_zint()
-    if (zint_status == 0) {
-      return(invisible(NULL))
-    }
-
 
     if (GENDER != 'M' & GENDER != 'F') {
       stop('GENDER must be M or F', call. = FALSE)

@@ -2,8 +2,6 @@
 #'
 #' Check that zint is installed
 #'
-#' @return a numeric value of 0 or 1. O if `zint` is not available and 1 if it is
-#'
 #' @keywords internal
 
 check_zint <- function()
@@ -18,9 +16,9 @@ check_zint <- function()
       )
     )
 
-    return(0)
+    stop('zint not found', call. = FALSE)
 
   } else{
-    return(1)
+    return(invisible(NULL))
   }
 }

@@ -6,9 +6,6 @@
 \usage{
 check_zint()
 }
-\value{
-a numeric value of 0 or 1. O if \code{zint} is not available and 1 if it is
-}
 \description{
 Check that zint is installed
 }
