@@ -7,12 +7,12 @@
 text_location(x)
 }
 \arguments{
-\item{x}{a character string of the barcode label}
+\item{x}{a character string of the bar code label}
 }
 \value{
-a charatcer string of the formatted location values (ie, '+80+35)
+a character string of the formatted location values (ie, '+80+35)
 }
 \description{
-Create the locatoon coordinates to ensure barcode text is centered when using \code{magick::image_annotate} in \code{stack_barcodes}
+Create the location coordinates to ensure bar code text is centred when using \code{magick::image_annotate} in \code{stack_barcodes}
 }
 \keyword{internal}

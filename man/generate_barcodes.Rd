@@ -38,7 +38,7 @@ generate_barcodes(
 }}
 
 \item{pathRename}{logical; if \code{TRUE} then the directory where barcodes are saved to will be named \code{ID} + \code{Sys.Date()}. IF \code{FALSE} (default)
-then the original UID code will be used for directory namming.}
+then the original UID code will be used for directory naming.}
 }
 \description{
 This is the main worker function of the whole package. \code{generate_barcodes} wraps up the barcode creation and arrangement and

@@ -10,9 +10,9 @@ image_width_resize(barcode_image)
 \item{barcode_imaage}{a \code{magick-image} of barcode that has read in using \code{magick::image_read()}}
 }
 \value{
-a character string of formated width and heght (ie, '93\%x100\%)
+a character string of formatted width and height (ie, '93\%x100\%)
 }
 \description{
-Generate the values needed for \code{magick::image_resize()} to scale barcodes width relatve to the DOB barcode
+Generate the values needed for \code{magick::image_resize()} to scale barcodes width relative to the DOB barcode
 }
 \keyword{internal}
