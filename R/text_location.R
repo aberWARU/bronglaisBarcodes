@@ -1,9 +1,9 @@
 #' Centre Barcode Text
 #'
-#' Create the locatoon coordinates to ensure barcode text is centered when using `magick::image_annotate` in `stack_barcodes`
+#' Create the location coordinates to ensure bar code text is centred when using `magick::image_annotate` in `stack_barcodes`
 #'
-#' @param x a character string of the barcode label
-#' @return a charatcer string of the formatted location values (ie, '+80+35)
+#' @param x a character string of the bar code label
+#' @return a character string of the formatted location values (ie, '+80+35)
 #'
 #' @keywords internal
 
@@ -25,7 +25,7 @@ text_location <- function(x)
   }
 
 
-  format_centre <- stringr::str_c('+', centre, '+35')
+  format_centre <- stringr::str_c('+', centre, '+43')
 
   return(format_centre)
 }
