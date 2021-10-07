@@ -55,7 +55,7 @@ stack_barcodes <-
                              GENDER,
                              font = 'Arial',
                              size = 14,
-                             location = '+210+35')
+                             location = '+210+43')
 
 
     dob_stack <-
@@ -90,7 +90,7 @@ stack_barcodes <-
                                                                                                          'LOG',
                                                                                                          font = 'Arial',
                                                                                                          size = 12,
-                                                                                                         location = '+180+15')
+                                                                                                         location = '+80+15')
     }
 
     if (TYPE == 'FBC') {

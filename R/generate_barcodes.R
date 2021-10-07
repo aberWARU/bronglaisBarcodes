@@ -18,7 +18,7 @@
 #'  * **HBA1C** : Glycated Haemoglobin (HbA1c)
 #'  * **INSULIN** : Insulin
 #' @param pathRename logical; if `TRUE` then the directory where barcodes are saved to will be named `ID` + `Sys.Date()`. IF `FALSE` (default)
-#' then the original UID code will be used for directory namming.
+#' then the original UID code will be used for directory naming.
 #'
 #' @export
 

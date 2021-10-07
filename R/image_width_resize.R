@@ -1,9 +1,9 @@
 #' Resize Image Width
 #'
-#' Generate the values needed for `magick::image_resize()` to scale barcodes width relatve to the DOB barcode
+#' Generate the values needed for `magick::image_resize()` to scale barcodes width relative to the DOB barcode
 #'
 #' @param barcode_imaage a `magick-image` of barcode that has read in using `magick::image_read()`
-#' @return a character string of formated width and heght (ie, '93%x100%)
+#' @return a character string of formatted width and height (ie, '93%x100%)
 #'
 #' @keywords internal
 
