@@ -90,7 +90,7 @@ stack_barcodes <-
                                                                                                          'LOG',
                                                                                                          font = 'Arial',
                                                                                                          size = 12,
-                                                                                                         location = '+80+15')
+                                                                                                         location = '+180+15')
     }
 
     if (TYPE == 'FBC') {
