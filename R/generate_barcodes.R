@@ -54,7 +54,8 @@ generate_barcodes <-
         'VITD',
         'GLUCOSE',
         'INSULIN',
-        'HBA1C')
+        'HBA1C',
+        'CRP')
 
     TYPE_CHECK <- list()
     for (i in seq_along(TYPE)) {

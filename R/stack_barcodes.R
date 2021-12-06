@@ -160,6 +160,19 @@ stack_barcodes <-
         )
     }
 
+    if (TYPE == 'CRP') {
+      type_stack <-
+        c(white_space, white_space) %>% magick::image_append(., stack = TRUE) %>% magick::image_annotate(
+          .,
+          'Yellow top: CRP',
+          font = 'Arial',
+          size = 12,
+          location = '+170+15'
+        )
+    }
+
+
+
 
     final_barcode <-
       c(white_space2, id_stack, address_stack, dob_stack, type_stack) %>% magick::image_append(., stack = TRUE)
